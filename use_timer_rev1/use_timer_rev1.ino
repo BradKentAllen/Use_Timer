@@ -1,9 +1,10 @@
       ////--- SHELL Basic Interface  ---///
 //  0.1 - based on shell_intervace_1.3
 //  0.4 - production test 
+//  0.5 - hour bug, 
 
 int software1 = 0; // Software Series
-int software2 = 4; // Software Rev
+int software2 = 5; // Software Rev
 
       //-- Libraries  --//
 #include <Wire.h>  // (7% 140k) I2C communication
@@ -253,7 +254,7 @@ void refreshDisplay(int elapsedSeconds, int nowSeconds, bool full){
   if (mmE == 0 || full == true){ 
     lcd.setCursor(0,0);
     if (hhE < 10){lcd.print(" ");}
-    lcd.print(hhT); 
+    lcd.print(hhE); 
     lcd.print(":");
     }
   if (ssE == 0 || full == true){
