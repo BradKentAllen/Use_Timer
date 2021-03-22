@@ -4,7 +4,7 @@
 //  0.5 - hour bug, 
 
 int software1 = 0; // Software Series
-int software2 = 5; // Software Rev
+int software2 = 6; // Software Rev
 
       //-- Libraries  --//
 #include <Wire.h>  // (7% 140k) I2C communication
@@ -68,8 +68,6 @@ long elapsedSeconds = 0;
 long startMillis = 0;
 long nowSeconds = 0;
 #define LOOPTIME 500 // time for main loop
-//int lastMinute = 0; // used for display refresh vs full update
-
 
 
   //////--  SETUP  --////////
@@ -226,7 +224,7 @@ void zeroDisplay(){
 
 
 // ---- Main Display Function ----
-void refreshDisplay(int elapsedSeconds, int nowSeconds, bool full){
+void refreshDisplay(long elapsedSeconds, long nowSeconds, bool full){
   // calculate elapsed times
   int hhE = elapsedSeconds / 3600;
   int mmE = (elapsedSeconds / 60) - (hhE * 60);
