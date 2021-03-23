@@ -2,6 +2,8 @@
 //  0.1 - based on shell_intervace_1.3
 //  0.4 - production test 
 //  0.5 - hour bug, 
+//  0.6 - bug fix: needed long in function
+//  0.7 - switch pins 3 and 9
 
 int software1 = 0; // Software Series
 int software2 = 6; // Software Rev
@@ -16,15 +18,11 @@ int software2 = 6; // Software Rev
     //---INITIALIZE---//
 LiquidCrystal_I2C lcd(0x27,16,2); // set the LCD address to 0x27 for a 16 chars and 2 line display
 
-    // Outputs     
-  //#define LEDpin 13
-
    // Sensor Inputs
-   #define switchPin 9
-
-        
+#define switchPin 3
+      
    // Button Pins and Variables
-  int displayButton1Pin = 3;
+#define displayButton1Pin 9
 
     //-- Display Managment Variables --//
 byte displayWait = 20; //loops (*10) set displays waits for input
